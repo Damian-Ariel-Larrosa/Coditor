@@ -44,6 +44,25 @@ a {
     color: #CCCCCC;
 }
 
+/* Modifique el estilo del apartado de options (Ramiro 23/05/2024) */
+#options {
+    max-width: 500px;
+}
+
+#options ul{
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+    align-content: center;
+    height: 100%;
+    gap: 10px;
+    font-weight: 900;
+    justify-content: space-between;
+}
+
+#options ul li {
+    
+}
 
 /* List Items */
 #options li,
