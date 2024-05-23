@@ -1,0 +1,159 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body ,button,select{
+    background-color: #181818;
+    color: #CCCCCC;
+    outline: none;
+    border: none;
+}
+a {
+    color: #359DFC;
+    text-decoration: none;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: #2B2B2B;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#181818 ;
+    border-radius: 50px;
+}
+
+/* Superior de la pestaña */
+#header_visual {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 5vh;
+}
+
+#header_visual nav input {
+    border: 2px solid #2A2A2A;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #242424;
+    outline: none;
+    color: #CCCCCC;
+}
+
+
+/* List Items */
+#options li,
+#windows li,
+#textarea header ul,
+#textarea nav ul,
+footer ul {
+    display: inline-block;
+    list-style: none;
+}
+
+#textarea header ul,
+footer ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+#textarea nav ul {
+    display: flex;
+    justify-content: start;
+}
+
+main {
+    display: flex;
+    height: calc(100vh - 10vh); /* Ajuste para incluir header y footer */
+}
+
+/* Barra lateral izquierda */
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 5%;
+    border: 1px solid #2B2B2B;
+}
+
+.sidebar-icons {
+    display: flex;
+    flex-direction: column;
+    color: #868686;
+}
+
+/* Explorador de archivos */
+#explorer {
+    width: 20%;
+    border: 1px solid #2B2B2B;
+}
+
+#explorer ul {
+    list-style: none;
+}
+
+#explorer header {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Parte grande */
+#textarea {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #2B2B2B;
+}
+
+#textarea header {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #2B2B2B;
+}
+
+#ruta {
+    height: 5vh;
+}
+
+#editor {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100%); /* Ajuste para evitar el espacio */
+    resize: none;
+    outline: none;
+    border: none;
+    background-color: #1F1F1F;
+    
+}
+
+
+
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 5vh;
+    border: 1px solid #2B2B2B;
+    background-color: #181818;
+}
+
+footer ul {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
+}
+
+footer li {
+    display: inline-block;
+}
