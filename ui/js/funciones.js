@@ -3,7 +3,7 @@ function SidebarOver(element){
 }
 
 function SidebarOut(element){
-    element.style.color="none"/*Cambiado los backgrounds para ser trasparentes -D*/
+    element.style.color="#868686"/*Cambiado los backgrounds para ser trasparentes -D*/
 }
 
 function OverGeneric(element){
