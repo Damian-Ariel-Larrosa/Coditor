@@ -1,25 +1,44 @@
 /* Reset básico */
-* {
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-body ,button,select{
+
+body ,button,select{ 
+    /*Cambiada la fuente*/
     background-color: #181818;
     color: #CCCCCC;
     outline: none;
     border: none;
+    font-family: "Kanit", sans-serif;
 }
+
+body {
+    font-size: 1.6rem;
+}
+
 a {
     color: #359DFC;
     text-decoration: none;
+}
+
+img {
+    max-width: 100%;
 }
 
 ::-webkit-scrollbar{
     width: 10px;
 }
 ::-webkit-scrollbar-track{
-    background: #2B2B2B;
+    background: #232323;
 }
 
 ::-webkit-scrollbar-thumb{
@@ -27,7 +46,7 @@ a {
     border-radius: 50px;
 }
 
-/* Superior de la pestaña */
+/* Superior de la pestaña -D*/
 #header_visual {
     display: flex;
     justify-content: space-between;
@@ -46,7 +65,7 @@ a {
 
 /* Modifique el estilo del apartado de options (Ramiro 23/05/2024) */
 #options {
-    max-width: 500px;
+    margin-left: 1rem;
 }
 
 #options ul{
@@ -55,18 +74,23 @@ a {
     align-items:center;
     align-content: center;
     height: 100%;
-    gap: 10px;
     font-weight: 900;
     justify-content: space-between;
 }
 
-#options ul li {
-    
+#options ul li:first-child {
+    margin-right: 0.5rem;
+    height: 2.3rem;
+}
+
+#options ul button {
+    font-size: 1.3rem;
+    padding: 0 0.8rem;
 }
 
 /* List Items */
 #options li,
-#windows li,
+.windows li,
 #textarea header ul,
 #textarea nav ul,
 footer ul {
@@ -85,32 +109,58 @@ footer ul {
     justify-content: start;
 }
 
+#search,.windows{
+    /*alineados elementos search y windows -D*/
+    display: flex;
+    align-items: center;
+}
+
+.windows svg{
+    /*Cambiada el espaciado entre iconos y alineacion -D*/
+    margin-right: 0.2rem;
+    margin-top: 0.8rem;
+    height: 2.3rem;
+}
+#search svg,#notificaciones,#errores{
+    margin-right: 0.4rem;
+}
+
 main {
     display: flex;
-    height: calc(100vh - 10vh); /* Ajuste para incluir header y footer */
+    height: calc(100vh - 10vh); /* Ajuste para incluir header y footer -D*/
 }
 
 /* Barra lateral izquierda */
 #sidebar {
     display: flex;
     flex-direction: column;
+
     justify-content: space-between;
     align-items: center;
+
     height: 100%;
-    width: 5%;
     border: 1px solid #2B2B2B;
 }
+
 
 .sidebar-icons {
     display: flex;
     flex-direction: column;
+    align-items: center;
     color: #868686;
+    gap: 1.8rem;
+    margin: 1rem 1rem 1rem 1rem;
 }
 
-/* Explorador de archivos */
+svg,#header_visual nav input{
+    cursor: pointer;
+}
+
+/* Explorador de archivos -D*/
 #explorer {
     width: 20%;
     border: 1px solid #2B2B2B;
+    padding-left: 1rem;
 }
 
 #explorer ul {
@@ -119,7 +169,10 @@ main {
 
 #explorer header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    margin-right: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 0.5rem;
 }
 
 /* Parte grande */
@@ -145,7 +198,7 @@ main {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: calc(100%); /* Ajuste para evitar el espacio */
+    height: calc(100%); /* Ajuste para evitar el espacio -D*/
     resize: none;
     outline: none;
     border: none;
